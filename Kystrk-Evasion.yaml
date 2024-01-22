@@ -1,0 +1,402 @@
+hometown: Fang Cove
+force_healer_town: Fang Cove
+training_manager_town_duration: 60
+training_manager_hunting_priority: false
+combat_spell_timer: 40
+
+training_abilities:
+#  App: 60
+  Tactics: 10
+  Analyze: 120
+#  Stealth: 60
+  Hunt: 120
+  Astro: 240
+  Herbs: 600
+  Recall: 1500
+  Almanac: 60
+  Charged Maneuver:
+    :check: always
+    :cooldown: 10
+
+dynamic_dance_skill: true
+skip_last_kill: true
+
+hunting_info:
+- :zone:
+  - fuligin_moths_velatohr
+#  - adult_wyverns
+
+  stop_on:
+  - Evasion
+#  - Defending
+  - Shield Usage
+#  - Chain Armor
+  - Tactics
+  # - Debilitation
+#  - Targeted Magic
+
+
+  # stop_on_low:
+  # - Targeted Magic
+
+
+
+  args:
+  - Evasion
+  
+#  before:
+#  - go2 13558
+
+  after:
+  - go2 13558
+
+  :duration: 60
+
+stop_on_low_threshold: 5
+
+#stance_override: 100 0 93
+
+skinning:
+  skin: false
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+
+aiming_trainables:
+- Tactics
+
+# weapon_training:
+#   #Targeted Magic: greataxe
+#   Bow: yew shortbow
+#   Small Edged: officer's sabre
+#   Large Edged: indurium schiavona
+#   Twohanded Edged: iron greatsword
+#   Large Blunt: throwing hammer
+#   Twohanded Blunt: flail
+#   Crossbow: smokewood pelletbow
+#   Light Thrown: throwing club
+#   Heavy Thrown: throwing hammer
+#   Small Blunt: throwing club
+#   Brawling: ''
+#   Staves: diamondwood staff
+#   Polearms: felwood halberd
+#   Offhand Weapon: officer's sabre
+#   Slings: blue sling
+
+priority_weapons:
+  - Light Thrown
+  - Polearms
+  - Heavy Thrown
+  - Small Edged
+
+#gear_sets:
+
+#  standard:
+#  - coarse cowl
+#  - triangular sipar
+#  - ka'hurst hauberk
+#  - leather gloves
+#  - animite shackle
+
+#  standard:
+#  - ka'hurst hauberk
+#  - scale gloves
+#  - plate mask
+#  - padded hood
+#  - animite shackle
+#  - triangular sipar
+
+cycle_armors:
+  Plate Armor:
+  - plate gauntlets
+  - plate sallet
+  Brigandine:
+  - brigandine balaclava
+  - scale gloves
+  Light Armor:
+  - coarse cowl
+  - leather gloves
+
+spells:
+  tksh: &tksh
+    Telekinetic Shield:
+      mana: 50
+      cambrinth:
+      - 50
+      recast: 1
+  cv: &cv
+    Clear Vision:
+      mana: 50
+      cambrinth:
+      - 50
+  shadows: &shadows
+    Shadows:
+      mana: 50
+      cambrinth:
+      - 50
+  maf: &maf
+    Manifest Force:
+      mana: 50
+      cambrinth:
+      - 50
+  lw: &lw
+    Lay Ward:
+      mana: 50
+      cambrinth:
+      - 50
+  pg: &pg
+    Piercing Gaze:
+      mana: 50
+      cambrinth:
+      - 50
+  ease: &ease
+    Ease Burden:
+      use_auto_mana: true
+  aus: &aus
+    Aura Sight:
+      mana: 50
+      cambrinth:
+      - 50
+  seer: &seer
+    Seer's Sense:
+      mana: 50
+      cambrinth:
+      - 50
+  locate: &locate
+    Locate:
+      use_auto_mana: true
+  fm: &fm
+    Focus Moonbeam:
+      use_auto_mana: true
+  moonblade: &moonblade
+    Moonblade:
+      use_auto_mana: true
+  mt: &mt
+    Machinist's Touch:
+      use_auto_mana: true
+  fm: &fm
+    Focus Moonbeam:
+      use_auto_mana: true
+  rf: &rf
+    Refractive Field:
+      mana: 10
+  ss: &ss
+    Shadow Servant:
+      use_auto_mana: true
+  sr: &sr
+    Sentinel's Resolve:
+      mana: 50
+      cambrinth:
+      - 75
+  dc: &dc
+    Destiny Cipher:
+      mana: 400
+      ritual: true
+      focus: ledger
+  sm: &sm
+    Shift Moonbeam:
+      use_auto_mana: true
+  col: &col
+    Cage of Light:
+      mana: 50
+      cambrinth:
+      - 50
+      cast: cast ambient
+  gg: &gg
+    Glythtide's Gift:
+      mana: 55
+      symbiosis: chaos
+  shadowling: &shadowling
+    Shadowling:
+      use_auto_mana: true
+  bc: &bc
+    Braun's Conjecture:
+      mana: 350
+      ritual: true
+      focus: ledger
+  rtr: &rtr
+    Read the Ripples:
+      mana: 800
+      ritual: true
+      focus: ledger
+  tpr: &tpr
+    Teleport:
+      use_auto_mana: true
+      cast: cast ripplegate
+  mpp: &mpp
+    Minor Physical Protection:
+      abbrev: my tattoo
+      prep: invoke
+      mana:
+      cambrinth:
+      - 35
+      - 40
+      recast: 1
+  aa: &aa
+    Aspirant's Aegis:
+      mana: 50
+      cambrinth:
+      - 35
+      - 40
+      recast: 1
+  shear: &shear
+    Shear:
+      use_auto_mana: true
+      recast: 40
+  mpp: &mpps
+    Minor Physical Protection:
+      abbrev: my tattoo
+      prep: invoke
+      mana:
+      symbiosis: chaos
+  aa: &aas
+    Aspirant's Aegis:
+      mana: 52
+      symbiosis: chaos
+  shw: &shw
+    Shadow Web:
+      mana: 12
+      cast: cast engaged
+  iots: &iots
+    Invocation of the Spheres:
+      mana: 800
+      focus: ledger
+      recast: 20
+      before:
+      - message: release iots
+        matches:
+        - Release what
+        - You feel the energy 
+      stats:
+      - Intelligence
+      - Agility
+
+waggle_sets:
+  default:
+    << : *pg
+    << : *cv
+  astrology:
+    << : *cv
+    << : *dc
+    << : *pg
+    << : *aus
+#    << : *bc
+    << : *rtr
+  maf:
+    << : *maf
+  shadows:
+    << : *shadows
+  ease:
+    << : *ease
+  cv:
+    << : *cv
+  pg:
+    << : *pg
+  aus:
+    << : *aus
+  seer:
+    << : *seer
+  moonblade:
+    << : *moonblade
+  lw:
+    << : *lw
+  pick:
+    << : *cv
+    << : *mt
+  prehunt_buffs:
+    << : *seer
+    << : *maf
+    << : *tksh
+    << : *iots
+#    << : *sr
+    << : *pg
+  fm:
+    << : *fm
+  rf:
+    << : *rf
+  burgle:
+    << : *rf
+  ss:
+    << : *ss
+  dc:
+    << : *dc
+  sm:
+    << : *sm
+  col:
+    << : *col
+  shadowling:
+    << : *shadowling
+  bc:
+    << : *bc
+  tpr:
+    << : *tpr
+  mpp:
+    << : *mpp
+  shear:
+    << : *shear
+  mpps:
+    << : *mpps
+  shw:
+    << : *shw
+  iots:
+    << : *iots    
+  tksh:
+    << : *tksh
+
+
+train_with_spells: true
+
+
+tk_ammo: brass razor
+
+offensive_spells:
+
+# - skill: Targeted Magic
+#   name: Telekinetic Storm
+#   harmless: false
+#   mana: 53
+#   cambrinth:
+#   - 40
+#   cast_only_to_train: true
+
+- skill: Debilitation
+  name: Mental Blast
+  cast_only_to_train: false
+  recast_every: 60
+  harmless: true
+  mana: 15
+
+#- skill: Debilitation
+#  name: Mind Shout
+#  cast_only_to_train: false
+#  harmless: true
+#  mana: 15
+
+#- skill: Debilitation
+#  name: Shadow Web
+#  cast_only_to_train: true
+#  cyclic: true
+#  harmless: true
+#  mana: 12
+
+#- skill: Sorcery
+#  name: Halt
+#  cast_only_to_train: true
+#  harmless: true
+#  mana: 33
+
+#offensive_spell_cycle:
+#- Mind Shout
+#- Mental Blast
+#- Mental Blast
+#- Mental Blast
+#- Telekinetic Storm
+
+
+buff_spells:
+  << : *shw
+  << : *maf
+  << : *shadows
+  << : *seer
+  << : *tksh
+

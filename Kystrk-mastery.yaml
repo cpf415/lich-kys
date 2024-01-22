@@ -1,0 +1,27 @@
+hunting_info:
+- :zone:
+   - cabalist-outdoors
+   - vicious_intercessor
+
+  stop_on:
+  - Melee Mastery
+  - Missile Mastery
+  - Brigandine
+  - Chain Armor
+  - Plate Armor
+  - Light Armor
+  - Defending
+  - Performance
+
+  stop_on_low:
+  - Targeted Magic
+  - Debilitation
+  - Evasion
+  - Tactics
+  - Stealth
+  - Alchemy
+  - Enchanting
+
+  args:
+
+  :duration: 15

@@ -1,0 +1,73 @@
+combat_spell_timer: 60
+
+hunting_info:
+- :zone:
+#  - dinnsehencha
+  # - adult_wyverns
+  - dinnsehencha_grotto
+
+
+  stop_on:
+  - First Aid
+
+  stop_on_low:
+  #-Targeted Magic
+  - Debilitation
+  - Evasion
+  - Tactics
+  - Stealth
+
+  args:
+
+  :duration: 17
+
+  after:
+  - go2 13558
+training_abilities:
+#  App: 60
+#  Tactics: 90
+#  Analyze: 180
+#  Stealth: 60
+  Hunt: 240
+#  Astro: 360
+#  Recall: 1500
+  Herbs: 600
+  Almanac: 60
+  Charged Maneuver:
+    :check: always
+    :cooldown: 10
+
+cycle_armors:
+  Plate Armor:
+  - plate gauntlets
+  - plate sallet
+  Brigandine:
+  - brigandine balaclava
+  - scale gloves
+
+buff_nonspells:
+  release mpp: 60
+
+training_abilities:
+#  App: 60
+#  Tactics: 90
+  Analyze: 180
+#  Stealth: 60
+  Hunt: 240
+  PercMana: 150
+#  Astro: 360
+  Recall: 1500
+  Herbs: 600
+  Almanac: 60
+  Charged Maneuver:
+    :check: always
+    :cooldown: 10
+
+
+skinning:
+  skin: false
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+  dissect: true
+  dissect_priority: First Aid

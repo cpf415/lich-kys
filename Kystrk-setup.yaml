@@ -1,0 +1,1909 @@
+hometown: Shard
+safe_room: 4377 #9459 ww #19330 triage
+engineering_room: 4377
+outfitting_room: 4377
+enchanting_room: 4377
+alchemy_room: 4377
+outdoors_room: 9459
+#force_healer_town: Fang Cove
+repair_timer: 120000
+alchemy_herb_storage: haversack
+#repair_heuristic_gear:
+#  - agonite sipar
+#  - animite shackle
+#repair_heuristic_threshold: 8
+repair_withdrawal_amount: 250_000
+sell_loot_money_on_hand: 25 gold
+learned_column_count: 1
+custom_loot_type: treasure
+training_manager_town_duration: 60
+training_manager_hunting_priority: false
+training_manager_priority_skills:
+- Bow
+- Twohanded Edged
+- Targeted Magic
+prehunt_buffing_room: 4377
+waggle_spells_concentration_threshold: 60
+footwear: sandals
+cornmaze_containers:
+- haversack
+- war belt
+
+herb_container: haversack
+#stance_override: 100 0 96
+
+workorders_repair: false
+cube_armor_piece: shackle
+
+tk_ammo: brass razor
+duskruin:
+  labyrinth:
+    pet_noun: monkey
+    loot_container: backpack
+spellbook_case: felwood case
+spellbook_name: spellbook
+spellbook_scrolls_chapter: 7
+spellbook_safe_room: 14771
+suhelmas:
+  catacombs:
+    loot_container:
+      - canvas sack
+      - haversack
+      - war belt
+    redeem_contract: true
+    contract_container: backpack
+  
+
+stacker_container: haversack    
+scroll_stackers:
+  - blue tome
+  - scroll portfolio
+  - leather folio 
+  - abyssal-black codex
+  - eventide-hued tome 
+  - hefty booklet
+  - worn book
+  - verdant booklet 
+  - swirled codex
+loot_subtractions:
+- skippet
+- trunk
+- coffer
+- strongbox
+- chest
+- casket
+- caddy
+- bolt
+- bolts
+- drake-fang arrow
+- drake-fang arrows
+
+training_list:
+
+- skill:
+#  - Targeted Magic
+  - Debilitation
+
+
+  start: 7
+
+  scripts:
+  - safe-room
+  - multi 1, perc moons
+  - multi 1, eph manifest mote
+#  - buff prehunt_buffs
+#  - multi 1, invoke my tattoo
+  - hunting-buddy shwshort
+  - burgle start
+  - outdoorsmanship 15
+  - multi 1, release symbiosis
+  - appraisal
+  # - multi 1,align transmogrify survival to defense,align transmogrify survival to offense,align transmogrify survival to magic,align transmogrify survival to lore,align transmogrify magic to defense,align transmogrify magic to offense,align transmogrify lore to defense,align transmogrify lore to offense
+  - burgle start
+
+
+
+- skill:
+  - Evasion
+  - Shield Usage
+  - Tactics
+  - Defending
+#  - Debilitation
+
+  start: 8
+
+  scripts:
+  - burgle start
+  - safe-room
+#  - multi 1, perc moons
+  - multi 1, eph manifest welkin
+#  - buff prehunt_buffs
+#  - predictdefense
+#  - multi 1, invoke my tattoo
+  - hunting-buddy Evasion
+  - outdoorsmanship 12
+  - multi 1,release symbiosis
+  # - multi 1,align transmogrify survival to defense,align transmogrify survival to offense,align transmogrify survival to magic,align transmogrify survival to lore,align transmogrify magic to defense,align transmogrify magic to offense,align transmogrify lore to defense,align transmogrify lore to offense
+  # - appraisal
+  - burgle start
+
+
+
+- skill:
+  - First Aid
+  start: 6
+  scripts:
+  - burgle start
+  - hunting-buddy fa
+  - burgle start
+  - outdoorsmanship 6
+  - checkfavors
+  - multi 1,release symbiosis
+  # - multi 1,align transmogrify survival to defense,align transmogrify survival to offense,align transmogrify survival to magic,align transmogrify survival to lore,align transmogrify magic to defense,align transmogrify magic to offense,align transmogrify lore to defense,align transmogrify lore to offense
+  - sell-loot
+
+- skill:
+  - Small Edged
+  - Large Edged
+  - Twohanded Edged
+  - Small Blunt
+  - Large Blunt
+  - Twohanded Blunt
+  - Crossbow
+  - Parry Ability
+  - Polearms
+  - Staves
+  - Brawling
+  - Light Thrown
+  - Offhand Weapon
+  - First Aid
+
+  start: 5
+  scripts:
+  - burgle start
+  - safe-room
+  - crossing-repair
+  - herb-stock
+  - checkfavors
+  - hunting-buddy
+  - burgle start
+  - outdoorsmanship 12
+  - multi 1,release symbiosis
+  # - multi 1,align transmogrify survival to defense,align transmogrify survival to offense,align transmogrify survival to magic,align transmogrify survival to lore,align transmogrify magic to defense,align transmogrify magic to offense,align transmogrify lore to defense,align transmogrify lore to offense
+  - sell-loot
+  - appraisal
+
+
+
+
+- skill:
+  - Athletics
+  start: 8
+  scripts:
+  - burgle start
+  - athletics
+
+
+
+- skill:
+  - Enchanting
+  start: 8
+
+  scripts:
+  - craft enchanting
+  - outdoorsmanship 4
+  - multi 1,release symbiosis
+  - burgle start
+
+
+- skill:
+  - Alchemy
+  start: 8
+
+  scripts:
+  - kysalch alchemy
+  - burgle start
+
+# - skill:
+#   - Engineering
+#   start: 8
+#   scripts:
+#   - workorder shaping
+#   - appraisal
+#   - outdoorsmanship 4
+#   - multi 1,release symbiosis
+#   - burgle start
+
+- skill:
+  - Forging
+  start: 8
+  scripts:
+  - sell-loot
+  - craft forging
+  - outdoorsmanship 4
+  - burgle start
+
+- skill:
+  - Scholarship
+  start: 8
+  scripts:
+  - burgle start
+  - attunement sigil
+
+
+
+
+# - skill:
+#   - Alchemy
+#   start: 15
+#   scripts:
+#   - multi 1, perc mana
+# #  - multi 2,sleep
+# #  - apprais focus bracer
+# #  - multi 1,awake
+#   - craft alchemy
+#   - multi 1, perc mana
+#   - appraisal
+#   - outdoorsmanship 8
+# #  - workorders remedies repair
+#   - burgle start
+
+
+# - skill:
+#   - Enchanting
+#   start: 15
+#   scripts:
+#   - multi 1, perc mana
+# #  - multi 2,sleep
+# #  - apprais focus bracer
+# #  - multi 1,awake
+#   - craft enchanting
+#   - multi 1, perc mana
+#   - appraisal
+#   - outdoorsmanship 8
+# #  - workorders artificing repair
+#   - burgle start
+
+- skill:
+  - Outdoorsmanship
+  start: 8
+  scripts:
+  - burgle start
+  - go2 9459
+  - outdoorsmanship 8
+  - outdoorsmanship 8
+  - multi 1,release symbiosis
+  - appraisal
+
+- skill:
+  - Melee Mastery
+  - Missile Mastery
+  - Brigandine
+  - Chain Armor
+  - Plate Armor
+  - Light Armor
+  - Defending
+  - Enchanting
+
+
+
+  start: 33
+  scripts:
+  - sell-loot
+  - burgle start
+  - safe-room
+  - hunting-buddy mastery
+  - burgle start
+  - sell-loot
+  - appraisal
+
+
+hunting_info:
+- :zone:
+   # - jeol_moradu
+   - void_moths_kaal
+   - fuligin_moths_velatohr
+  
+  stop_on:
+  - Small Edged
+  - Large Edged
+  - Twohanded Edged
+  - Small Blunt
+  - Large Blunt
+  - Twohanded Blunt
+  - Polearms
+  - Staves
+  - Brawling
+  - Light Thrown
+  - Heavy Thrown
+  - Crossbow
+  - Parry Ability
+
+  stop_on_low:
+#  - Targeted Magic
+  - Debilitation
+  - Evasion
+  - Tactics
+
+
+  args:
+  
+#  before:
+#  - go2 13558
+  
+  after:
+  - release symbiosis
+  - go2 13558
+
+  :duration: 28
+
+hunting_buddies:
+  - Zinchaga
+  - Velicar
+  - Jaged
+  - Kattena
+  - Puug
+  - Vaerek
+  - Zowpurr
+  - Xif
+  - Paven
+  - Frulle
+  - Pazohn
+  - Ishcah
+
+
+armor_exp_training_max_threshold: 18
+weapon_exp_training_max_threshold: 23
+magic_exp_training_max_threshold: 33
+survival_exp_training_max_threshold: 27
+lore_exp_training_max_threshold: 28
+
+stop_on_low_threshold: 6
+stop_on_high_threshold: 24
+
+water_holder: silver vial
+favor_god: Kerenhappuch
+# Offer primers on favor altars instead of doing the puzzle, allows more immortal choices and is faster at higher favor counts
+use_favor_altars: true
+favor_goal: 45
+
+
+alcohol_container: moonshine jug
+water_container: white waterskin
+
+restock:
+  # arrow:
+  #   quantity: 30
+  tk_ammo:
+    name: brass razor
+    price: 1800
+    size: 1
+    stackable: false
+    room: 13992
+    quantity: 2
+combat_trainer_target_increment: 5
+combat_trainer_action_count: 26
+
+Priority_Weapons:
+
+weapon_training:
+  # Targeted Magic: greataxe
+  Bow: yew shortbow
+  Small Edged: throwing axe
+  Large Edged: indurium schiavona
+  Twohanded Edged: iron greatsword
+  Small Blunt: war hammer
+  Large Blunt: throwing hammer
+  Twohanded Blunt: flail
+  Crossbow: smokewood pelletbow
+  Slings: blue sling
+  Light Thrown: throwing axe
+  Heavy Thrown: throwing hammer
+  Brawling: ''
+  Staves: dragonwood staff
+  Polearms: sweeping glaive
+  Offhand Weapon: throwing axe
+dynamic_dance_skill: true
+
+using_light_crossbow: true
+aiming_trainables:
+  - Brawling
+  - Heavy Thrown
+  - Light Thrown
+  - Small Blunt
+  - Small Edged
+
+training_abilities:
+  - Charged Maneuver: 90
+
+prioritize_maneuver_doublestrike: true
+
+doublestrike_trainables:
+  - Small Edged
+  - Small Blunt
+
+loot_additions:
+- tablet
+- scroll
+- map
+- bark
+- parchment
+- ostracon
+- seishaka leaf
+- roll
+- long arrow
+- long arrows
+- lemicule runestone
+
+loot_subtractions:
+- skippet
+- trunk
+- coffer
+- strongbox
+- chest
+- casket
+- caddy
+- box
+- crate
+- bolt
+- bolts
+- rock
+- arrow
+- arrows
+
+appraisal_training: 
+  - pouches
+
+forage_item: yellow larkspur
+outdoors_method: forage
+
+use_harness_when_arcana_locked: true
+
+held_athletics_items: 
+  - yew shortbow
+  - smokewood pelletbow
+gear:
+#weapons
+- :adjective: sweeping
+  :name: glaive
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :wield: true
+- :adjective: dragonwood
+  :name: staff
+- :adjective: black
+  :name: nightstick
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :wield: true
+- :adjective: kertig
+  :name: maul
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :wield: true
+- :name: flail
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :wield: true
+- :adjective: officer's
+  :name: sabre
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :wield: true
+- :adjective: indurium
+  :name: schiavona
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :wield: true
+- :adjective: iron
+  :name: greatsword
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :wield: true
+- :adjective: smokewood
+  :name: pelletbow
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: yew
+  :name: shortbow
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: blue
+  :name: sling
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+- :adjective: kertig
+  :name: maul
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :wield: true
+- :adjective: throwing
+  :name: axe
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :wield: true
+- :adjective: throwing
+  :name: hammer
+  :is_leather: false
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :wield: true
+- :adjective: war
+  :name: hammer
+  :is_leather: true
+  :hinders_lockpicking: false
+  :is_worn: false
+  :swappable: false
+  :wield: true
+#armor
+- :adjective: ka'hurst
+  :name: hauberk
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: plate
+  :name: mask
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: padded
+  :name: hood
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: scale
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: ka'hurst
+  :name: gloves
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: ka'hurst
+  :name: balaclava
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: coarse
+  :name: cowl
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: leather
+  :name: gloves
+  :is_leather: true
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: plate
+  :name: gauntlets
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: brigandine
+  :name: balaclava
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: plate
+  :name: sallet
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: animite
+  :name: shackle
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: demonscale
+  :name: shield
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+#wearables
+#tools
+- :adjective: silversteel
+  :name: burin
+  :is_leather: false
+- :adjective: silversteel
+  :name: brazier
+  :is_leather: false
+- :adjective: augmenting
+  :name: loop
+- :adjective: imbuement
+  :name: rod
+  :is_leather: false
+- :adjective: mixing
+  :name: stick
+  :is_leather: false
+- :adjective: large
+  :name: bowl
+  :is_leather: false
+- :adjective: wirework
+  :name: sieve
+  :is_leather: false
+- :adjective: grooved
+  :name: pestle
+  :is_leather: false
+- :adjective: stone
+  :name: mortar
+  :is_leather: false
+- :adjective: metal
+  :name: clamps
+  :is_leather: false
+- :adjective: wood
+  :name: shaper
+  :is_leather: false
+- :adjective: carving
+  :name: knife
+  :is_leather: false
+- :name: rasp
+  :is_leather: false
+- :adjective: sewing
+  :name: needles
+  :is_leather: false
+- :adjective: sunderstone
+  :name: slickstone
+  :is_leather: false
+- :name: scissors
+  :is_leather: false
+- :name: awl
+  :is_leather: false
+- :adjective: knitting
+  :name: needles
+  :is_leather: false
+- :adjective: forging
+  :name: hammer
+  :is_leather: false
+- :adjective: leather
+  :name: bellows
+  :is_leather: false
+- :adjective: stirring
+  :name: rod
+  :is_leather: false
+- :adjective: muracite
+  :name: tongs
+  :is_leather: false
+- :adjective: wide
+  :name: shovel
+  :is_leather: false
+cambrinth: broodling
+cambrinth_cap: 75
+
+attack_overrides:
+  Small Edged: feint
+  Large Edged: feint
+  Twohanded Edged: feint
+  Small Blunt: feint
+  Large Blunt: feint
+  Twohanded Blunt: feint
+  Light Thrown: lob
+  Heavy Thrown: throw
+  Small Blunt: feint
+  Brawling: gouge
+  Staves: feint
+  Polearms: feint
+  Offhand Weapon: feint
+
+gear_sets:
+  weapons:
+  - ka'hurst hauberk
+  - leather gloves
+  - ka'hurst balaclava
+  - animite shackle
+  - demonscale shield
+  standard:
+  - ka'hurst hauberk
+  - plate gauntlets
+  - brigandine balaclava
+  - animite shackle
+  - demonscale shield
+
+cycle_armors:
+  Plate Armor:
+  - plate gauntlets
+  - plate sallet
+  Brigandine:
+  - brigandine balaclava
+  - scale gloves
+  Light Armor:
+  - coarse cowl
+  - leather gloves
+
+crafting_container: haversack
+enchanting_tools:
+- silversteel brazier
+- augmenting loop
+- silversteel burin
+- imbuement rod
+
+alchemy_tools:
+- stone mortar
+- grooved pestle
+- large bowl
+- mixing stick
+- wirework sieve
+
+shaping_tools:
+- carving knife
+- wood shaper
+- rasp
+- metal clamps
+- metal drawknife
+
+outfitting_tools:
+- sewing needles
+- sunderstone slickstone
+- scissors
+- knitting needles
+- yardstick
+
+forging_tools:
+- forging hammer
+- leather bellows
+- stirring rod
+- wide shovel
+- muracite tongs
+
+spells:
+  tksh: &tksh
+    Telekinetic Shield:
+      mana: 50
+      cambrinth:
+      - 50
+      recast: 1
+      prep_time: 14
+  cv: &cv
+    Clear Vision:
+      mana: 50
+      cambrinth:
+      - 50
+  shadows: &shadows
+    Shadows:
+      mana: 50
+      cambrinth:
+      - 50
+      prep_time: 8
+  maf: &maf
+    Manifest Force:
+      mana: 50
+      cambrinth:
+      - 50
+      prep_time: 8
+  lw: &lw
+    Lay Ward:
+      mana: 50
+      cambrinth:
+      - 50
+  pg: &pg
+    Piercing Gaze:
+      mana: 50
+      cambrinth:
+      - 50
+      prep_time: 7
+  ease: &ease
+    Ease Burden:
+      use_auto_mana: true
+  aus: &aus
+    Aura Sight:
+      mana: 50
+      cambrinth:
+      - 50
+  seer: &seer
+    Seer's Sense:
+      mana: 50
+      cambrinth:
+      - 50
+      prep_time: 9
+  locate: &locate
+    Locate:
+      use_auto_mana: true
+  fm: &fm
+    Focus Moonbeam:
+      use_auto_mana: true 
+  mt: &mt
+    Machinist's Touch:
+      use_auto_mana: true
+  fm: &fm
+    Focus Moonbeam:
+      use_auto_mana: true
+  unleash: &unleash
+    Unleash:
+      mana: 100
+  rf: &rf
+    Refractive Field:
+      mana: 10
+      prep_time: 3
+  ss: &ss
+    Shadow Servant:
+      use_auto_mana: true
+  sr: &sr
+    Sentinel's Resolve:
+      mana: 50
+      cambrinth:
+      - 75
+  rw: &rw
+    Righteous Wrath:
+      mana: 100
+  dc: &dc
+    Destiny Cipher:
+      mana: 600
+      ritual: true
+      focus: ledger
+  sm: &sm
+    Shift Moonbeam:
+      use_auto_mana: true
+  col: &col
+    Cage of Light:
+      mana: 50
+      cambrinth:
+      - 50
+      prep_time: 9
+      cast: cast ambient
+      moon: false
+  col2: &col2
+    Cage of Light:
+      mana: 50
+      cambrinth:
+      - 50
+      cast: cast ambient
+      prep_time: 9
+  gg: &gg
+    Glythtide's Gift:
+      mana: 65
+      symbiosis: chaos
+  shadowling: &shadowling
+    Shadowling:
+      mana: 100
+      after:
+      - message: invoke shadowling
+        matches:
+        - Invoke what
+        - You gesture, adjusting the pattern that binds the shadowling to this plane
+        - You're not sure what would happen
+
+  sls: &sls
+    Starlight Sphere:
+      abbrev: sls
+      mana: 25
+      cast: cast spider
+      prep_time: 9
+      cyclic: true
+  bc: &bc
+    Braun's Conjecture:
+      mana: 700
+      ritual: true
+      focus: ledger
+  rtr: &rtr
+    Read the Ripples:
+      mana: 800
+      ritual: true
+      focus: ledger
+  tpr: &tpr
+    Teleport:
+      use_auto_mana: true
+      cast: cast ripplegate
+  mpp: &mpp
+    Minor Physical Protection:
+      abbrev: my tattoo
+      prep: invoke
+      mana:
+      cambrinth:
+      - 35
+      - 40
+      recast: 1
+
+  # aa: &aa
+  #   Aspirant's Aegis:
+  #     mana: 50
+  #     cambrinth:
+  #     - 35
+  #     - 40
+  #     recast: 1
+  shear: &shear
+    Shear:
+      use_auto_mana: true
+      recast: 40
+  meg: &meg
+    Membrach's Greed:
+      mana: 50
+      cambrinth:
+        - 25
+        - 25
+  mpp: &mpps
+    Minor Physical Protection:
+      abbrev: my tattoo
+      prep: invoke
+      mana:
+      symbiosis: chaos
+  # aa: &aas
+  #   Aspirant's Aegis:
+  #     mana: 52
+  #     symbiosis: chaos
+  shw: &shw
+    Shadow Web:
+      mana: 12
+      cast: cast creature
+      prep_time: 7
+  iots: &iots
+    Invocation of the Spheres:
+      mana: 800
+      focus: ledger
+      recast: 20
+      before:
+      - message: release iots
+        matches:
+        - Release what
+        - You feel the energy 
+      stats:
+      - Intelligence
+      - Agility
+  ulsb: &ulsb
+    Unleash:
+      mana: 100
+      cast: cast spellbook
+waggle_sets:
+  default:
+    << : *pg
+    << : *cv
+  astrology:
+    # << : *cv
+#    << : *dc
+    << : *pg
+    << : *aus
+#    << : *bc
+    << : *rtr
+  maf:
+    << : *maf
+  shadows:
+    << : *shadows
+  ease:
+    << : *ease
+  cv:
+    << : *cv
+  pg:
+    << : *pg
+  aus:
+    << : *aus
+  seer:
+    << : *seer
+  unleash:
+    << : *unleash
+  lw:
+    << : *lw
+  pick:
+    << : *cv
+    << : *mt
+  prehunt_buffs:
+    << : *seer
+    << : *maf
+    << : *tksh
+#    << : *iots
+#    << : *sr
+    << : *meg
+    << : *aus
+    << : *shadowling            
+  fm:
+    << : *fm
+  rf:
+    << : *rf
+  burgle:
+    << : *rf
+  ss:
+    << : *ss
+  dc:
+    << : *dc
+  sm:
+    << : *sm
+  col:
+    << : *col
+  col2:
+    << : *col2
+  shadowling:
+    << : *shadowling
+  bc:
+    << : *bc
+  tpr:
+    << : *tpr
+  mpp:
+    << : *mpp
+  shear:
+    << : *shear
+  mpps:
+    << : *mpps
+  shw:
+    << : *shw
+  iots:
+    << : *iots    
+  tksh:
+    << : *tksh
+  rw:
+    << : *rw
+  ulsb:
+    << : *ulsb
+buff_spells:
+  << : *shadowling
+  << : *shadows
+  << : *meg
+  << : *seer
+  << : *tksh
+  << : *maf
+  << : *rw
+
+train_with_spells: true
+
+buff_nonspells:
+  release mpp: 60
+#  fill my suede pouch with my tail bag: 180
+
+offensive_spells:
+# - skill: Targeted Magic
+#   name: Telekinetic Storm
+#   harmless: false
+#   mana: 70
+#   cast_only_to_train: false
+
+
+- skill: Debilitation
+  name: Mental Blast
+  cast_only_to_train: false
+  mana: 10
+  
+training_spells: &cst
+  Utility:
+    abbrev: shadowling
+    mana: 100
+    symbiosis: chaos
+    after:
+    - message: release shadowling
+      matches:
+      - You gesture
+      - A faint growl
+      - That would be a neat trick
+#  Augmentation:
+#    abbrev: aus
+#    mana: 100
+#    symbiosis: chaos
+  Warding:
+    abbrev: col
+    mana: 100
+    symbiosis: chaos 
+    moon: false
+    cast: cast ambient
+    after:
+    - message: release col
+      matches:
+      - Release what
+      - Your barrier
+  Sorcery:
+    abbrev: auspice
+    mana: 83
+    symbiosis: chaos
+    # after:
+    # - message: release mpp
+    #   matches:
+    #   - Release what
+    #   - The soft silver glow fades from around you
+combat_spell_training:
+  << : *cst
+
+
+# threshold in mind-states to train combat_spell_training spells up to.
+magic_exp_training_max_threshold: 28
+# only use combat_spell_training spells when there are more than this many mobs in combat.
+combat_spell_training_max_threshold:
+# don't cast offensive/buff/combat_training spells unless you have more than this much mana.
+offensive_spell_mana_threshold: 20
+training_spell_mana_threshold: 50
+buff_spell_mana_threshold: 40
+# Timer for casting combat_spell_training.  Edit with extreme caution - too little can cause other casting to be ignored.
+combat_spell_timer: 30
+
+#prep_scaling_factor: 0.9
+
+combat_training_abilities_target: 29
+training_abilities:
+#  App: 60
+#  Tactics: 90
+  Analyze: 180
+#  Stealth: 60
+  Hunt: 120
+  Recall: 1500
+  Herbs: 600
+  Almanac: 60
+  Charged Maneuver:
+    :check: always
+    :cooldown: 10
+
+dont_stalk: true
+use_stealth_attacks: false
+use_stealth_ranged: false
+
+skinning:
+  skin: true
+  arrange_all: false
+  arrange_count: 0
+  tie_bundle: true
+  dissect: true
+  dissect_priority: First Aid
+
+full_pouch_container: backpack
+
+tie_gem_pouches: true
+spare_gem_pouch_container: toolcase
+gem_pouch_adjective: suede
+gem_pouch_noun: pouch
+
+
+crafting_training_spells_enable_sorcery: true
+crafting_training_spells:
+  Utility:
+    abbrev: shadowling
+    symbiosis: chaos
+    cast_only_to_train: true
+    mana: 100
+    after:
+    - message: release shadowling
+      matches:
+      - You gesture
+      - A faint growl
+      - That would be a neat trick
+    matches:
+     - Release what
+     - Your corruption fades
+  Warding:
+    abbrev: col
+    symbiosis: chaos
+    cast_only_to_train: true
+    mana: 100
+    cast: cast ambient
+    moon: false
+    after:
+    - message: release col
+      matches:
+      - Release what
+      - Your barrier
+#  Augmentation:
+#    abbrev: aus
+#    symbiosis: chaos
+#    cast_only_to_train: true
+#    mana: 100
+  Sorcery:
+    abbrev: auspice
+    mana: 80
+    symbiosis: chaos
+    # after:
+    # - message: release mpp
+    # matches:
+    # - Release what
+    # - The soft silver glow fades from around you
+tarantula_noun: harvester spider
+tarantula_startup_delay: 15
+
+tarantula:
+  Armor:
+    combat:
+    - Chain Armor
+    - Defending
+  Weapon:
+    combat:
+    - Melee Mastery
+    - Missile Mastery
+    - Offhand Weapon
+    - Parry Ability
+
+tarantula_excluded_skills:
+  - Thievery
+  - Stealth
+  - Locksmithing
+  - Athletics
+  - Targeted Magic
+  - Debilitation
+  - Augmentation
+  - Warding
+  - Utility
+  - Sorcery
+  - Lunar Magic 
+  - Primary Magic
+  - Astrology
+  - Attunement
+  - Shield Usage
+  - Tactics
+  - Light Armor
+  - Brigandine
+  - Plate Armor
+  - Defending
+  - Scholarship
+  - Appraisal
+  - Alchemy
+  - Engineering
+  - Enchanting
+  - Forging
+  - Outfitting
+  - Evasion
+  - First Aid
+  - Skinning
+#  - Perception
+  - Small Edged
+  - Large Edged
+  - Twohanded Edged
+  - Small Blunt
+  - Large Blunt
+  - Twohanded Blunt
+  - Polearms
+  - Staves
+  - Brawling
+  - Light Thrown
+  - Heavy Thrown
+  - Bow
+  - Crossbow
+  - Slings
+
+tarantula_no_use_scripts:
+  - burgle
+almanac_noun: scholar's tome
+
+almanac_no_use_scripts:
+- go2
+- get2
+- bescort
+- steal
+- astrology
+- clean-leather
+- clean-lumber
+- scouting
+- athletics
+- mech-lore
+- corn-maze
+- burgle
+- combat-trainer
+- appraisal
+
+wands:
+  icy crystal:
+    activation message: 
+    - Mentally steeling yourself in preparation for the unnatural action
+    activate verb: invoke
+    container: toolcase
+    cooldown: 62
+    count: 2
+
+  ironwood wand:
+    activation message: 
+    - You feel somehow more alive and vigorous due to the spell.
+    - You feel the strange aliveness in your limbs renew itself.
+    activate verb: invoke
+    container: toolcase
+    cooldown: 32
+    count: 2
+
+  platinum poppet:
+    activation message: 
+    - Sharpened beneath the spell pattern's lens, your proprioception and social instincts burgeon in phrenic harmony.  The consequence of each tiny movement and mannerism is suddenly easier to anticipate, leaving you feeling empowered with outward grace and charm.
+    - Your enhanced situational awareness wavers for a moment, then feels refreshed.
+    activate verb: invoke
+    container: toolcase
+    cooldown: 32
+    count: 2
+
+  indurium phoenix:
+    activation message: 
+    - Your blood rises as images of ferocious battles play across your mind.
+    activate verb: invoke
+    container: toolcase
+    cooldown: 32
+    count: 2
+    
+wand_watcher_no_use_scripts:
+  - burgle
+  - go2
+  - sell
+  - craft
+  - first-aid
+  - athletics
+  - safe-room
+  - sell-loot
+  - herb-stock
+  - appraisal
+
+walkingastro_no_use_scripts:
+- sew
+- carve
+- tinker
+- forge
+- remedy
+- shape
+- enchant
+- combat-trainer
+- buff
+- steal
+- performance
+- astrology
+- mech-lore
+- first-aid
+- study-art
+- craft
+- pick
+- bescort
+- workorders
+- go2
+play_no_use_scripts:
+  - sew
+  - carve
+  - tinker
+  - forge
+  - remedy
+  - shape
+  - enchant
+  - outdoorsmanship
+  - combat-trainer
+  - buff
+  - burgle
+  - theurgy
+  - astrology
+  - researcher
+  - appraisal
+  - attunement
+crossing_training:
+- Astrology
+- Athletics
+- First Aid
+- Scholarship
+- Outdoorsmanship
+- Appraisal
+- Performance
+- Attunement
+- Augmentation
+- Utility
+- Warding
+- Sorcery
+
+
+textbook: true
+textbook_type: leather textbook
+
+worn_instrument: cowbell
+empty_hunting_room_messages:
+  - Pitter patter.
+stealing_towns:
+   - Crossing
+   - Arthe Dale
+   - Dirge
+   - Kaerna Village
+   - Tiger Clan
+   - Knife Clan
+#   - Leth Deriel
+#   - Riverhaven
+#  - Shard
+#  - Horse Clan  
+
+use_lockpick_ring: true
+lockpick_type: slim
+stop_pick_on_mindlock: false
+lockpick_container: lockpick ring
+harvest_traps: false
+lockpick_dismantle: 
+picking_box_source: lootsack
+skip_lockpick_ring_refill: true
+consumable_lockboxes:
+- keepsake box
+- jewelry box
+
+
+workorder_recipes:
+  remedies: [blister cream,neck salve, abdominal salve, chest salve, head salve, back salve, eye salve, skin salve, limb salve, neck ungent, chest ungent, head ungent, back ungent, eye ungent, skin ungent, limb ungent, neck potion, abdomen potion, chest potion, head potion, back potion, eye potion, skin potion, limb potion, neck tonic, abdomen tonic, chest tonic, head tonic, back tonic, eye tonic, tonic, skin tonic, limb tonic, face ointment, body ointment, limb ointment, face poultices, skin ointment, body poultices, general purpose ointment, skin poultices, limb poultices, general poultices, body draught, face draught, limb draught, skin draught, general purposes draught, skin elixir, limb elixir, body elixir, face elixir, general elixir]
+
+  artificing:
+    - advanced AP ritual focus
+## Sigil hunting settings ##
+# Minimum precision needed to harvest
+sigil_min_precision_threshold: 95
+# Array of sigils to search for
+search_sigils:
+ - permutation
+ - nurture
+ - decay
+  # - abolition
+# - paradox
+  # - clarification
+# - metamorphosis
+# - induction
+# - evolution
+# - congruence
+# - ascension
+ 
+# Sigil book to store harvested sigils
+sigil_book: black collection
+
+
+
+discard_scrolls:
+- Burden
+- Dispel
+- Ease Burden
+- Gauge Flow
+- Imbue
+- Lay Ward
+- Manifest Force
+- Seal Cambrinth
+- Strange Arrow
+
+#---------------------------------------------------------------------|
+#--------------------------------------------------------  Astrology  |
+have_telescope: false
+telescope_storage:
+  container: backpack
+divination_tool:
+  name: prism
+  container: toolcase
+astrology_pool_target: 10
+astrology_use_full_pools: true
+#astrology_exp_threshold: 33
+astrology_training:
+#  - rtr
+  - observe
+# - weather
+astrology_prediction_skills:
+ magic: Arcana
+ lore: engineering
+ offense: melee mastery
+ defense: light armor
+ survival: thievery
+
+astral_plane_training:
+  train_destination: leth
+  train_source: crossing
+
+train_with_burgle: true
+burgle_settings:
+  room: 2876 #6201 #2876 steelclaw                              # pick your own room, no guards should ever come here
+  entry_type: prioritylockpick                     # lockpick | rope | cycle
+  use_lockpick_ring: true                   # if you use a worn lockpick stacker
+  lockpick_container: lockpick ring         # name of your lockpick stacker
+  max_search_count: 3                       # max number of total searches to do including retries
+  retry: false                             # retry if you don't find loot.  default: false
+  loot: drop                               # drop | keep | bin | pawn   default: keep (bin and pawn are not supported currently)
+  loot_container: haversack                 # container to keep loot in while burglering
+  safe_mode: true                           # stop searching and try to get out as quickly as possible when hearing footsteps.  Default: true
+  room_blacklist:                           # array of rooms to ignore. Case sensitive.
+   # - Kitchen
+  item_whitelist:                           # array of full item names (adj + noun) of items to keep no matter what.  Case Sensitive.
+    - blunt-tipped bolts
+    - blunt-tipped arrows
+    - blunt stones
+    - memory orb
+    - gardening apron
+#    - !ruby/regexp '/\S+ fabric/'  # Bedroom - illustrates REGEX syntax for items
+    
+remedies: [blister cream,neck salve, abdominal salve, chest salve, head salve, back salve, eye salve, skin salve, limb salve, neck ungent, chest ungent, head ungent, back ungent, eye ungent, skin ungent, limb ungent, neck potion, abdomen potion, chest potion, head potion, back potion, eye potion, skin potion, limb potion, neck tonic, abdomen tonic, chest tonic, head tonic, back tonic, eye tonic, tonic, skin tonic, limb tonic, face ointment, body ointment, limb ointment, face poultices, skin ointment, body poultices, general purpose ointment, skin poultices, limb poultices, general poultices, body draught, face draught, limb draught, skin draught, general purposes draught, skin elixir, limb elixir, body elixir, face elixir, general elixir]
+empty_hunting_room_messages:
+
+consumable_lockboxes:
+  - keepsake box
+  - jewelry box
+
+  #HERB STUFF
+remedy_container: apron
+
+herbs:
+  lujeakave_elixir:
+    name: lujeakave elixir
+    size: 6
+    stackable: true
+    room: 16710
+    price: 784
+    quantity: 10
+  jadice_flower:
+    name: jadice flower
+    size: 6
+    stackable: true
+    room: 13997
+    price: 586
+    quantity: 20
+  plovik_leaf:
+    name: plovik leaf
+    size: 6
+    stackable: true
+    room: 13997
+    price: 586
+    quantity: 20
+  nilos_salve:
+    name: nilos salve
+    size: 6
+    stackable: true
+    room: 13997
+    price: 586
+    quantity: 6
+  hulnik_grass:
+    name: hulnik grass
+    size: 6
+    stackable: true
+    room: 13997
+    price: 586
+    quantity: 6
+  nemoih_root:
+    name: nemoih root
+    size: 6
+    stackable: true
+    room: 13997
+    price: 631
+    quantity: 6
+  georin_salve:
+    name: georin salve
+    size: 6
+    stackable: true
+    room: 13997
+    price: 631
+    quantity: 6
+  sufil_sap:
+    name: sufil sap
+    size: 6
+    stackable: true
+    room: 13997
+    price: 631
+    quantity: 6
+  yelith_root:
+    name: yelith root
+    size: 6
+    stackable: true
+    room: 13997
+    price: 676
+    quantity: 20
+  ithor_potion:
+    name: ithor potion
+    size: 6
+    stackable: true
+    room: 13997
+    price: 676
+    quantity: 20
+  muljin_sap:
+    name: muljin sap
+    size: 6
+    stackable: true
+    room: 13997
+    price: 937
+    quantity: 6
+  junliar_stem:
+    name: junliar stem
+    size: 6
+    stackable: true
+    room: 13997
+    price: 676
+    quantity: 6
+  # blocil_potion:  Not available in Shard.
+  #   name: blocil potion
+  #   size: 6
+  #   stackable: false
+  #   room: 13997
+  #   price: 937
+  #   quantity: 6
+  riolur_leaf:
+    name: riolur leaf
+    size: 6
+    stackable: true
+    room: 13997
+    price: 721
+    quantity: 6
+  qun_pollen:
+    name: qun pollen
+    size: 6
+    stackable: true
+    room: 13997
+    price: 405
+    quantity: 6
+  genich_stem:
+    name: genich stem
+    size: 6
+    stackable: false
+    room: 13997
+    price: 405
+    quantity: 20
+  nuloe_stem:
+    name: nuloe stem
+    size: 6
+    stackable: true
+    room: 13997
+    price: 451
+    quantity: 20
+  cebi_root:
+    name: cebi root
+    size: 6
+    stackable: true
+    room: 13997
+    price: 451
+    quantity: 6
+  hulij_elixir:
+    name: hulij elixir
+    size: 6
+    stackable: false
+    room: 13997
+    price: 4541
+    quantity: 6
+  hisan_salve:
+    name: hisan salve
+    size: 6
+    stackable: true
+    room: 13997
+    price: 541
+    quantity: 6
+  jadice_pollen:
+    name: jadice pollen
+    size: 6
+    stackable: true
+    room: 13997
+    price: 451
+    quantity: 20
+  ojhenik_potion:
+    name: ojhenik potion
+    size: 6
+    stackable: false
+    room: 13997
+    price: 451
+    quantity: 20   
+
+
+personal_wayto_overrides:
+  crossing_to_fest:
+    start_room: 937
+    end_room: 16144
+    str_proc: fput 'whistle for dolphin transport'; pause 1 until Room.current.id == 16144
+    travel_time: 0.2
+  fest_to_crossing:
+    start_room: 16144
+    end_room: 937
+    str_proc: fput 'go dolphin corral'; pause 1 until Room.current.id == 937
+    travel_time: 0.2
+    
+hollow_eve_loot_container:
+  - haversack
+
+dice_bet_amount: 5001
+hollow_eve_junk:
+  - abacus
+  - alb
+  - amulet
+  - anklet
+  - apple
+  - armband
+  - ascot
+  - axe
+  - bacon
+  - band
+  - bandana
+  - beer
+  - belt
+  - bloodstained fabric
+  - blouse
+  - blown-glass pumpkin
+  - bobblehead
+  - boots
+  - bracelet
+  - bracer
+  - cake
+  - cambrinth orb
+  - cambrinth peach
+  - cambrinth ring
+  - cambrinth tart
+  - cambrinth turnip
+  - candy Alamhif
+  - candy Albreda
+  - candy Aliesa
+  - candy Aluna
+  - candy Aniek
+  - candy Asketi
+  - candy Be'ort
+  - candy Berengaria
+  - candy Botolf
+  - candy Chadatru
+  - candy Coshivi
+  - candy Damaris
+  - candy Demrris
+  - candy Dergati
+  - candy Divyaush
+  - candy Drogor
+  - candy Eimeuz
+  - candy Eluned
+  - candy Enelne
+  - candy Everild
+  - candy Eylhaar
+  - candy Faenella
+  - candy Firulf
+  - candy Glythtide
+  - candy Harawep
+  - candy Hav'roth
+  - candy Hodierna
+  - candy Huldah
+  - candy Idon
+  - candy Kerenhappuch
+  - candy Kertigen
+  - candy Kuniyo
+  - candy Lemicus
+  - candy Meraud
+  - candy Merion
+  - candy Misiumos
+  - candy Mrod
+  - candy Murrula
+  - candy Orisas
+  - candy Peri'el
+  - candy Phelim
+  - candy Rutilor
+  - candy Saemaus
+  - candy Sieben
+  - candy Sraxaec
+  - candy Tamsine
+  - candy Tenemlor
+  - candy Tieheq
+  - candy Truffenyi
+  - candy Urrem'tier
+  - candy Ushnish
+  - candy Xosiurion
+  - candy Zachriedek
+  - cap
+  - cape
+  - card
+  - carving knife
+  - charm
+  - cheese jar
+  - cheesecake
+  - chocolate badger
+  - chocolate ox
+  - chocolate welkin
+  - cigar
+  - cloak
+  - coat
+  - cobra
+  - coin
+  - comb
+  - cookie tin
+  - copper button
+  - cowbell
+  - coyote
+  - crackers
+  - cuff
+  - dagger
+  - dice
+  - doll
+  - earcuff
+  - earrings
+  - eel skin
+  - eraser
+  - eyeballs
+  - fan
+  - fangs
+  - fedora
+  - figurine
+  - flowers
+  - fuzzy bats
+  - garter
+  - ghosts
+  - globe
+  - gloves
+  - gold ring
+  - green bracelet
+  - ham
+  - handker
+  - hardtack
+  - hat
+  - haversack
+  - headscarf
+  - hose
+  - jacket
+  - jellybeans
+  - jerky
+  - kabob
+  - kelp
+  - line
+  - lollipop
+  - mask
+  - meat
+  - medal
+  - moccasins
+  - muffin
+  - mug
+  - necklace
+  - nectarine
+  - net
+  - nose-stud
+  - ocarina
+  - octopus
+  - otter
+  - pants
+  - papaya
+  - paper
+  - patch
+  - peach
+  - perfume
+  - pewter bar
+  - pie
+  - pin
+  - pineapple
+  - pinwheel
+  - pipe
+  - platinum ring
+  - plum
+  - plush maggot
+  - pomegranate
+  - powder
+  - pumpkins
+  - puppet
+  - quill
+  - quince
+  - raspberry
+  - razor
+  - ribbon
+  - ribs
+  - robe
+  - rockweed
+  - root
+  - rope
+  - sandwich
+  - sash
+  - scarf
+  - seeds
+  - sharkskin
+  - shirt
+  - shoe
+  - shopping bag
+  - silk cloth
+  - silver wristcuff
+  - skeletons
+  - skinning knife
+  - skirt
+  - skullcap
+  - slice
+  - snake
+  - soap
+  - socks
+  - steak
+  - steel ring
+  - stew
+  - strawberry
+  - sundress
+  - surcoat
+  - tankard
+  - tequila
+  - tin
+  - tobacco
+  - tooth
+  - torque
+  - torte
+  - towel
+  - toy sword
+  - traveler's pack
+  - trousers
+  - truffle
+  - tunic
+  - turtle
+  - turtles
+  - venison
+  - viper
+  - wheel
+  - whistle
+  - wormwood ring
+  - wristlet
+  - yo-yo
+  - zombies
+
